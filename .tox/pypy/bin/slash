@@ -1,0 +1,9 @@
+#!/Users/omergertel/Documents/workspace/slash_step/.tox/pypy/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'slash==0.0.2','console_scripts','slash'
+__requires__ = 'slash==0.0.2'
+import sys
+from pkg_resources import load_entry_point
+
+sys.exit(
+   load_entry_point('slash==0.0.2', 'console_scripts', 'slash')()
+)

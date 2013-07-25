@@ -1,0 +1,9 @@
+#!/Users/omergertel/Documents/workspace/slash_step/.tox/py26/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'raven==3.4.1','console_scripts','raven'
+__requires__ = 'raven==3.4.1'
+import sys
+from pkg_resources import load_entry_point
+
+sys.exit(
+   load_entry_point('raven==3.4.1', 'console_scripts', 'raven')()
+)
