@@ -1,1 +1,0 @@
-/usr/local/Cellar/pypy/1.9/lib_pypy/readline.py
