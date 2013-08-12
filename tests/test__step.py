@@ -26,7 +26,7 @@ class StepTest(unittest.TestCase):
         @hooks.step_error.register
         def step_error():
             self.actions['error'] = True
-            self._verify(success=False, end=False)
+            self._verify(success=False, end=False, error=True)
     def tearDown(self):
         self._handler.pop_application()
         hooks.step_start.unregister_by_identifier(None)
@@ -47,7 +47,7 @@ class StepTest(unittest.TestCase):
     def test_step_error(self):
         with self.assertRaises(AssertionError):
             with STEP("This will fail"):
-                assert 0 == 1
+                assert 1 == 0
         self._verify(success=False, error=True)
     def _verify(self, start=True, success=True, end=True, error=False):
         self.assertEquals(start, self.actions['start'])

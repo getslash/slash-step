@@ -10,7 +10,7 @@ class Step(object):
     def __str__(self):
         return self.message
     def __repr__(self):
-        return "<Step {!r}>".format(self.message)
+        return "<Step {0!r}>".format(self.message)
     def _start(self):
         _logger.notice(self.message)
         hooks.step_start()
