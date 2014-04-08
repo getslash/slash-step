@@ -22,7 +22,7 @@ setup(name="slash_step",
       description="A more granular sub STEP for slash tests",
       license="BSD",
       author="Omer Gertel",
-      author_email="omerg@gmail.com",
+      author_email="omer.gertel@gmail.com",
       url="https://github.com/omergertel/slash-step",
       version=__version__, # pylint: disable=E0602
       packages=find_packages(exclude=["tests"]),
