@@ -10,7 +10,7 @@ with open(_in_same_dir("slash_step", "__version__.py")) as version_file:
     exec(version_file.read())  # pylint: disable=W0122
 
 install_requires = [
-    "slash>=0.0.3",
+    "slash>=0.6.0",
 ]
 
 setup(name="slash_step",

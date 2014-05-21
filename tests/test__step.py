@@ -1,11 +1,10 @@
-import  platform
+import  platform, gossip
 if platform.python_version() < "2.7":
     import unittest2 as unittest
 else:
     import unittest
 from logbook.compat import LoggingHandler
 from slash_step import STEP
-from slash_step import hooks
 
 class StepTest(unittest.TestCase):
     def setUp(self):
@@ -13,26 +12,23 @@ class StepTest(unittest.TestCase):
         self._handler = LoggingHandler()
         self._handler.push_application()
         self.actions = {'start':False, 'error':False, 'end':False, 'success':False}
-        @hooks.step_start.register
+        @gossip.register('step.start', token="step")
         def step_start():
             self.actions['start'] = True
-        @hooks.step_end.register
+        @gossip.register('step.end', token="step")
         def step_end():
             self.actions['end'] = True
-        @hooks.step_success.register
+        @gossip.register('step.success', token="step")
         def step_success():
             self.actions['success'] = True
             self._verify(end=False)
-        @hooks.step_error.register
+        @gossip.register('step.error', token="step")
         def step_error():
             self.actions['error'] = True
             self._verify(success=False, end=False, error=True)
     def tearDown(self):
         self._handler.pop_application()
-        hooks.step_start.unregister_by_identifier(None)
-        hooks.step_end.unregister_by_identifier(None)
-        hooks.step_success.unregister_by_identifier(None)
-        hooks.step_error.unregister_by_identifier(None)
+        gossip.unregister_token(token="step")
         super(StepTest, self).tearDown()
     def test_step_entry(self):
         msg = "Some step message"

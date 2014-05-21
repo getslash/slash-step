@@ -1,6 +1,9 @@
-from slash import hooks
+import gossip
 
-step_start = hooks.ensure_custom_hook('step_start')
-step_success = hooks.ensure_custom_hook('step_success')
-step_error = hooks.ensure_custom_hook('step_error')
-step_end = hooks.ensure_custom_hook('step_end')
+step_hook_group = gossip.create_group("step")
+step_hook_group.set_strict()
+
+step_start = gossip.define('step.start')
+step_success = gossip.define('step.success')
+step_error = gossip.define('step.error')
+step_end = gossip.define('step.end')

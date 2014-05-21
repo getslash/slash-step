@@ -13,13 +13,13 @@ class Step(object):
         return "<Step {0!r}>".format(self.message)
     def _start(self):
         _logger.notice(self.message)
-        hooks.step_start()
+        hooks.step_start.trigger({})
     def _success(self):
-        hooks.step_success()
+        hooks.step_success.trigger({})
     def _error(self):
-        hooks.step_error()
+        hooks.step_error.trigger({})
     def _end(self):
-        hooks.step_end()
+        hooks.step_end.trigger({})
     def __enter__(self):
         self._start()
         return self
