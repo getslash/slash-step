@@ -12,17 +12,17 @@ class StepTest(unittest.TestCase):
         self._handler = LoggingHandler()
         self._handler.push_application()
         self.actions = {'start':False, 'error':False, 'end':False, 'success':False}
-        @gossip.register('step.start', token="step")
+        @gossip.register('slash.step_start', token="step")
         def step_start():
             self.actions['start'] = True
-        @gossip.register('step.end', token="step")
+        @gossip.register('slash.step_end', token="step")
         def step_end():
             self.actions['end'] = True
-        @gossip.register('step.success', token="step")
+        @gossip.register('slash.step_success', token="step")
         def step_success():
             self.actions['success'] = True
             self._verify(end=False)
-        @gossip.register('step.error', token="step")
+        @gossip.register('slash.step_error', token="step")
         def step_error():
             self.actions['error'] = True
             self._verify(success=False, end=False, error=True)
