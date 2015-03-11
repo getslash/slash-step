@@ -50,3 +50,6 @@ class StepTest(unittest.TestCase):
         self.assertEquals(end, self.actions['end'])
         self.assertEquals(success, self.actions['success'])
         self.assertEquals(error, self.actions['error'])
+    def test_step_creation_with_arguments(self):
+        step = STEP("Message with args and kwargs", "args", kwargs='kwargs')
+        self.assertEquals(step.message, "Message with args and kwargs")

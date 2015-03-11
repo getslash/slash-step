@@ -9,9 +9,9 @@ _logger = logbook.Logger(_LOGGER_NAME)
 
 class Step(object):
 
-    def __init__(self, msg):
+    def __init__(self, msg, *args, **kwargs):
         super(Step, self).__init__()
-        self.message = msg
+        self.message = msg.format(*args, **kwargs)
 
     def __str__(self):
         return self.message
