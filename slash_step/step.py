@@ -11,7 +11,7 @@ class Step(object):
 
     def __init__(self, msg, *args, **kwargs):
         super(Step, self).__init__()
-        self.message = msg.format(*args, **kwargs)
+        self.message = msg.format(*args, **kwargs) if args or kwargs else msg
 
     def __str__(self):
         return self.message

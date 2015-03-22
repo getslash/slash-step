@@ -53,3 +53,7 @@ class StepTest(unittest.TestCase):
     def test_step_creation_with_arguments(self):
         step = STEP("Message with args and kwargs", "args", kwargs='kwargs')
         self.assertEquals(step.message, "Message with args and kwargs")
+    def test_step_creation_with_curly_brackets_without_arguments(self):
+        message = "My message with {curly brackets}"
+        step = STEP(message)
+        self.assertEquals(step.message, message)
