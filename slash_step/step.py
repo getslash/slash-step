@@ -7,17 +7,17 @@ _STEP_LOG_LEVEL = logbook.NOTICE
 _logger = logbook.Logger(_LOGGER_NAME)
 
 
-class Step(object):
+class Step:
 
     def __init__(self, msg, *args, **kwargs):
-        super(Step, self).__init__()
+        super().__init__()
         self.message = msg.format(*args, **kwargs) if args or kwargs else msg
 
     def __str__(self):
         return self.message
 
     def __repr__(self):
-        return "<Step {0!r}>".format(self.message)
+        return f"<Step {self.message!r}>"
 
     def _start(self):
         _logger.log(_STEP_LOG_LEVEL, self.message)

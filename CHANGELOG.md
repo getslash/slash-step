@@ -3,6 +3,7 @@ Slash-Step ChangeLog
 
 Next Version
 ------------
+* Drop support for Python version < 3.6
 * Switch to PBR
 
 Version 0.9.0 (Released 2015-06-01)
