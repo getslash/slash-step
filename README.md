@@ -1,5 +1,11 @@
-slash_step
+slash-step
 ==========
+
+|                       |                                                                                     |
+|-----------------------|-------------------------------------------------------------------------------------|
+| Build Status          | ![Build Status](https://secure.travis-ci.org/getslash/slash-step.png?branch=master) |
+| Supported Versions    | ![Supported Versions](https://img.shields.io/pypi/pyversions/slash-step.svg)        |
+| Latest Version        | ![Latest Version](https://img.shields.io/pypi/v/slash-step.svg)                     |
 
 Create a more granular sub `STEP` for `Slash` tests.
 
