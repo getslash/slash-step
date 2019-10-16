@@ -1,5 +1,11 @@
-slash_step
+slash-step
 ==========
+
+|                       |                                                                                     |
+|-----------------------|-------------------------------------------------------------------------------------|
+| Build Status          | ![Build Status](https://secure.travis-ci.org/getslash/slash-step.png?branch=master) |
+| Supported Versions    | ![Supported Versions](https://img.shields.io/pypi/pyversions/slash-step.svg)        |
+| Latest Version        | ![Latest Version](https://img.shields.io/pypi/v/slash-step.svg)                     |
 
 Create a more granular sub `STEP` for `Slash` tests.
 
@@ -9,7 +15,7 @@ Steps allow to document subsections of a test, and also provide some handy hooks
 To continue the microwave example from `Slash`'s [docs](https://slash.readthedocs.org/en/latest/index.html):
 
 ```python
-from slash import Test, g
+from slash import g
 from slash_step import STEP, hooks
 
 @hooks.step_end.register
@@ -17,14 +23,13 @@ def measure_temperature():
     if g.microwave.temperature > 180:
         logger.warn("Microwave is over heating!")
     
-class MicrowaveTest(Test):
-    def test_cook_chicken(self):
-        with STEP("Defrost chicken"):
-            # ...
-        with STEP("Cook"):
-            # ...
-        with STEP("Eat"):
-            # Yum...
-            self.assertTrue(g.chicken.is_cooked())
+def test_cook_chicken():
+    with STEP("Defrost chicken"):
+        # ...
+    with STEP("Cook"):
+        # ...
+    with STEP("Eat"):
+        # Yum...
+        assert g.chicken.is_cooked()
 ```
 
