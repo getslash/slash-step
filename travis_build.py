@@ -10,15 +10,5 @@ def _execute(cmd):
 
 if __name__ == '__main__':
     print("Running from", os.path.abspath("."))
-    deps = [
-        "nose",
-        "slash"
-    ]
-    if sys.version_info < (2, 7):
-        deps.append("unittest2")
-
-    _execute("pip install --use-mirrors {0}".format(" ".join(deps)))
-
-    _execute("python setup.py develop")
-
-    _execute("nosetests -w tests")
+    _execute("pip install -e '.[testing]'")
+    _execute("pytest tests")
