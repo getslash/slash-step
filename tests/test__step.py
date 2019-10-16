@@ -1,10 +1,13 @@
-import  platform, gossip
-if platform.python_version() < "2.7":
-    import unittest2 as unittest
-else:
-    import unittest
+# pylint: disable=deprecated-method
+import gossip
+import platform
 from logbook.compat import LoggingHandler
 from slash_step import STEP
+
+if platform.python_version() < "2.7":
+    import unittest2 as unittest  # pylint: disable=import-error
+else:
+    import unittest
 
 class StepTest(unittest.TestCase):
     def setUp(self):
@@ -13,17 +16,17 @@ class StepTest(unittest.TestCase):
         self._handler.push_application()
         self.actions = {'start':False, 'error':False, 'end':False, 'success':False}
         @gossip.register('slash.step_start', token="step")
-        def step_start():
+        def step_start():  # pylint: disable=unused-variable
             self.actions['start'] = True
         @gossip.register('slash.step_end', token="step")
-        def step_end():
+        def step_end():  # pylint: disable=unused-variable
             self.actions['end'] = True
         @gossip.register('slash.step_success', token="step")
-        def step_success():
+        def step_success():  # pylint: disable=unused-variable
             self.actions['success'] = True
             self._verify(end=False)
         @gossip.register('slash.step_error', token="step")
-        def step_error():
+        def step_error():  # pylint: disable=unused-variable
             self.actions['error'] = True
             self._verify(success=False, end=False, error=True)
     def tearDown(self):
