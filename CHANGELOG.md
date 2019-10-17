@@ -1,8 +1,8 @@
 Slash-Step ChangeLog
 ====================
 
-Next Version
-------------
+Version 1.0.0 (Released 2019-10-17)
+-----------------------------------
 * Drop support for Python version < 3.6
 * Switch to PBR
 
