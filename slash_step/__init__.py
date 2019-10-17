@@ -1,3 +1,4 @@
+# pylint: disable=unused-import
 from .__version__ import __version__
 from . import hooks
 from .step import Step, _LOGGER_NAME, _STEP_LOG_LEVEL

@@ -1,5 +1,5 @@
 [MESSAGES CONTROL]
-disable=missing-docstring,locally-disabled,invalid-name,wrong-import-order,bad-option-value,ungrouped-imports,useless-object-inheritance,no-self-use,too-few-public-methods
+disable=missing-docstring,locally-disabled,invalid-name,wrong-import-order,bad-option-value,ungrouped-imports,no-self-use,too-few-public-methods
 
 [FORMAT]
 max-line-length=120

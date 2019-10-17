@@ -18,8 +18,9 @@ def called_counters(request):
     return obj
 
 
-class CalledCounters(object):
+class CalledCounters:
     def __init__(self):
+        super().__init__()
         self._called = Munch(start=0, error=0, end=0, success=0)
         self._token = str(uuid.uuid4())
         self._is_active = True
