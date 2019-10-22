@@ -1,6 +1,10 @@
 Slash-Step ChangeLog
 ====================
 
+Version 1.0.1 (Released 2019-10-22)
+-----------------------------------
+* Fix PyPi upload thourgh Travis
+
 Version 1.0.0 (Released 2019-10-17)
 -----------------------------------
 * Drop support for Python version < 3.6
