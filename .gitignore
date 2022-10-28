@@ -9,3 +9,4 @@ dist
 AUTHORS
 ChangeLog
 .pytest_cache
+.venv

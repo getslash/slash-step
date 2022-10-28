@@ -1,3 +1,0 @@
-Logbook>=1.2.0
-gossip
-slash>=0.7.0
