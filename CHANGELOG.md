@@ -1,6 +1,10 @@
 Slash-Step ChangeLog
 ====================
 
+Next Version
+------------
+* Use GitHub Actions CI (instead of Travis Ci)
+
 Version 1.0.1 (Released 2019-10-22)
 -----------------------------------
 * Fix PyPi upload thourgh Travis
