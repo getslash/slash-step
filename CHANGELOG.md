@@ -3,6 +3,8 @@ Slash-Step ChangeLog
 
 Next Version
 ------------
+Version 1.2.0 (Released 2021-09-07)
+-----------------------------------
 * Update supported python version: add 3.12 & remove 3.7
 
 Version 1.1.0 (Released 2021-09-07)
