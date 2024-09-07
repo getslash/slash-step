@@ -3,9 +3,10 @@ slash-step
 
 |                       |                                                                                     |
 |-----------------------|-------------------------------------------------------------------------------------|
-| Build Status          | ![Build Status](https://secure.travis-ci.org/getslash/slash-step.png?branch=master) |
+| Build Status          | ![Build Status](https://github.com/getslash/slash-step/actions/workflows/main.yml/badge.svg?branch=develop) |
 | Supported Versions    | ![Supported Versions](https://img.shields.io/pypi/pyversions/slash-step.svg)        |
 | Latest Version        | ![Latest Version](https://img.shields.io/pypi/v/slash-step.svg)                     |
+
 
 Create a more granular sub `STEP` for `Slash` tests.
 
@@ -22,7 +23,7 @@ from slash_step import STEP, hooks
 def measure_temperature():
     if g.microwave.temperature > 180:
         logger.warn("Microwave is over heating!")
-    
+
 def test_cook_chicken():
     with STEP("Defrost chicken"):
         # ...
