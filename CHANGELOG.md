@@ -3,6 +3,8 @@ Slash-Step ChangeLog
 
 Next Version
 ------------
+Version 1.1.0 (Released 2021-09-07)
+-----------------------------------
 * Use GitHub Actions CI (instead of Travis Ci)
 * Use 'pyproject.toml' for project's metadata
 
