@@ -3,7 +3,7 @@ slash-step
 
 |                       |                                                                                     |
 |-----------------------|-------------------------------------------------------------------------------------|
-| Build Status          | ![Build Status](https://github.com/getslash/slash-step/actions/workflows/main.yml/badge.svg?branch=develop) |
+| Build Status          | ![Build Status](https://github.com/getslash/slash-step/actions/workflows/main.yml/badge.svg?branch=master) |
 | Supported Versions    | ![Supported Versions](https://img.shields.io/pypi/pyversions/slash-step.svg)        |
 | Latest Version        | ![Latest Version](https://img.shields.io/pypi/v/slash-step.svg)                     |
 
