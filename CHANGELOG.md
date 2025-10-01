@@ -3,6 +3,10 @@ Slash-Step ChangeLog
 
 Next Version
 ------------
+* Update supported python version: add 3.13
+* Publish to PyPi through CI
+* Remove code compatibility for unsupported python versions
+
 Version 1.2.0 (Released 2021-09-07)
 -----------------------------------
 * Update supported python version: add 3.12 & remove 3.7

@@ -15,28 +15,27 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 ]
 dependencies = [
     "Logbook>=1.2.0",
     "gossip",
     "slash>=0.7.0",
+    # Slash still using pkg_resources, installing setuptools as temporary workaround
+    # so this repo can be installed with UV
+    # Should be removed once a new version of slash will be released.
+    "setuptools<81",
 ]
 
 dynamic = ["version"]
 
-authors = [
-    { name = "Omer Gertel", email = "omer.gertel@gmail.com" },
-]
+authors = [{ name = "Omer Gertel", email = "omer.gertel@gmail.com" }]
 
 [project.urls]
 "Homepage" = "https://github.com/getslash/slash-step"
 
 [project.optional-dependencies]
-testing = [
-    "pytest",
-    "pylint",
-    "munch",
-]
+testing = ["pytest", "pylint", "munch"]
 
 [tool.hatch.version]
 source = "vcs"
