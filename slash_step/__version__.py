@@ -1,3 +1,3 @@
-from ._compat import get_distribution
+from importlib.metadata import distribution
 
-__version__ = get_distribution("slash-step").version
+__version__ = distribution("slash-step").version
