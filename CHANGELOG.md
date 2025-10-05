@@ -3,7 +3,7 @@ Slash-Step ChangeLog
 
 Next Version
 ------------
-* Update supported python version: add 3.13
+* Update supported python version: add 3.13, 3.14
 * Publish to PyPi through CI
 * Remove code compatibility for unsupported python versions
 
